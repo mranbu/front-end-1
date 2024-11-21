@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container"></div>
+<h1>traffic rolues</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col" ></div>
+        <div class="col"id="northleft">NL
+            <i class="ri-arrow-up-line"></i>
+        </div>
+        <div class="col" id="northright">NR
+            <i class="ri-arrow-down-line"></i>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <div class="row">
+        <div class="col" id="westtop">WT
+            <i class="ri-arrow-right-line"></i>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col" id="easttop">ET
+            <i class="ri-arrow-right-line"></i>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col" id="westbottom">WB
+            <i class="ri-arrow-left-line"></i>
+        </div>
+        <div class="col"></div> 
+        <div class="col"></div>
+        <div class="col" id="eastbottom">EB
+            <i class="ri-arrow-left-line"></i>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col" id="southleft">SL
+            <i class="ri-arrow-up-line"></i>
+        </div>
+        <div class="col" id="southright">SR
+            <i class="ri-arrow-down-line"></i>
+        </div>
+        <div class="col"></div>
+    </div>
+<div class="row">
+    <div class="col mt-4 " ><button type="button" class="btn btn-primary" onclick="north()">NORTH</button></div>
+    <div class="col mt-4 " ><button type="button" class="btn btn-primary" onclick="south()">SOUTH</button></div>
+    <div class="col mt-4 " ><button type="button" class="btn btn-primary" onclick="west()">WEST</button></div>
+    <div class="col mt-4 " ><button type="button" class="btn btn-primary" onclick="east()">EAST</button></div>
+
+</div>
+
+       
+        
+        
+
+</div>
+    
+
+    <script>
+        var northleft;
+        var northright;
+        var westtop;
+        var westbottom;
+        var southleft;
+        var southright;
+        var easttop;
+        var eastbottom;
+function getInputs(){
+       northleft = document.getElementById('northleft');
+       northright = document.getElementById('northright');
+        westtop = document.getElementById('westtop');
+       westbottom = document.getElementById('westbottom');
+      southleft =  document.getElementById( 'southleft')
+       southright = document.getElementById( 'southright');
+        easttop = document.getElementById( 'easttop');
+        eastbottom = document.getElementById( 'eastbottom');
+        setDefault();
+}
+function setDefault(){
+    northleft.style.backgroundColor="red";
+    northright.style.backgroundColor="red";
+    westtop.style.backgroundColor="red";
+    westbottom.style.backgroundColor="red";
+    southleft.style.backgroundColor="red";
+    southright.style.backgroundColor="red";
+    easttop.style.backgroundColor="red";
+    eastbottom.style.backgroundColor="red";
+}
+getInputs();
+function north(){
+    setDefault();
+    northright.style.backgroundColor="green";
+    easttop.style.backgroundColor="green";
+    southright.style.backgroundColor="green";
+    westbottom.style.backgroundColor="green";
+}
+
+function south(){
+    setDefault();
+    southleft.style.backgroundColor="green";
+    westbottom.style.backgroundColor="green";
+    northleft.style.backgroundColor="green";
+    easttop.style.backgroundColor="green";
+}
+function west(){
+    setDefault();
+    westtop.style.backgroundColor="green";
+    easttop.style.backgroundColor="green";
+    northleft.style.backgroundColor="green";
+    southright.style.backgroundColor="green";
+}
+
+function east(){
+    setDefault();
+    eastbottom.style.backgroundColor="green";
+    westbottom.style.backgroundColor="green";
+    southright.style.backgroundColor="green";
+    northleft.style.backgroundColor="green";
+}
+
+
+</script>
+
+
+
+<style>
+    #northleft {
+   width: 10px;
+   height: 150px;
+   background-color: black;
+   border-right:dotted; 
+   border-right-color: bisque; 
+
+    }
+    #northright {
+   width: 10px;
+   height: 150px;
+   background-color: black; 
+    }
+   
+    #westtop {
+   width: 50px;
+   height: 100px;
+   background-color: black; 
+  
+    }
+   
+    #easttop {
+   width: 50px;
+   height: 100px;
+   background-color: black; 
+    }
+   
+    #westbottom {
+   width: 50px;
+   height: 100px;
+   background-color: black; 
+   border-top:dotted; 
+   border-top-color: bisque;
+    }
+   
+  #eastbottom {
+   width: 50px;
+   height: 100px;
+   background-color: black; 
+   border-top:dotted; 
+   border-top-color: bisque;
+    }
+   
+    #southleft{
+   width: 10px;
+   height: 150px;
+   background-color: black;
+   border-right:dotted; 
+   border-right-color: bisque;
+    }
+   
+    #southright {
+   width: 10px;
+   height: 150px;
+   background-color: black; 
+    }
+   
+  
+   
+</style>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+  .outer{
+    width: 300px;
+    height: 400px;
+    border: solid 2px black;
+    position: absolute;
+    left: 60px;
+
+  }
+  .iteams{
+    width: 200px;
+    height: 100px;
+    border: solid 2px red;
+    position: relative;
+
+  }
+  .iteam1{
+    background-color: aquamarine;
+    top: 80px;
+    left: 60px;
+  }
+
+  .iteam1:hover{
+    z-index: 1;
+
+  }
+
+  .iteam2{
+    background-color: blueviolet;
+    left: 20px;
+
+  }
+
+  .iteam2:hover{
+    z-index:1;
+    transform: scale(2);
+    background-color: coral;
+    transition-duration:2s;
+    transition-timing-function: ease-in-out;
+  }
+  .iteam3{
+    background-color: darkkhaki;
+    left: 40px;
+    bottom: 40px;
+    animation-name: iteam3animation;
+    animation-duration:2s;
+  }
+  @keyframes iteam3animation{
+  from{
+  transform: translate(20px);}
+  to{transform: translate(40px);}
+
+  10%{transform:rotate(10deg)}
+  20%{transform:rotate(20deg)}
+  50%{transform:rotate(55deg)}
+  70%{transform:rotate(65deg)}
+  90%{transform:rotate(80deg)}
+  100%{transform:rotate(95deg)}
+  170%{transform:rotate(360deg)}
+     
+</style>
+
+
+
+
+
+  <div>
+    <h2>z-index</h2>
+    <div class="outer">
+      <div class="iteam1 iteams">iteam1</div>
+      <div class="iteam2 iteams">iteam2</div>
+      <div class="iteam3 iteams">iteam3</div>
+    </div>
+    
+  </div>
+</body>
+</html>
+
+
+    
+    
